@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: container-registry.oracle.com/database/free:latest
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PWD=password123
+
+  httpbin:
+    image: kennethreitz/httpbin
+    ports:
+      - "80:80"
